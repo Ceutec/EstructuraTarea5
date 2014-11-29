@@ -82,3 +82,15 @@
 	<iostream>
 	<set>
 
+1417299351 source:/home/turupawn/Projects/Codeblocks/Clases/Estructura/Tarea5/Evaluador.cpp
+	"Evaluador.h"
+
+1417299358 /home/turupawn/Projects/Codeblocks/Clases/Estructura/Tarea5/Evaluador.h
+	<iostream>
+	<set>
+
+1417299080 source:/home/turupawn/Projects/Codeblocks/Clases/Estructura/Tarea5/main.cpp
+	"Evaluador.h"
+	<iostream>
+	<vector>
+

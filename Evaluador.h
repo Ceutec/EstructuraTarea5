@@ -10,8 +10,8 @@ using namespace std;
 
 void evaluar();
 
-bool existeCamino(int grafo[5][5], int inicio, int destino);
+int obtenerDistanciaAristaDirecta(int grafo[5][5], int inicio, int destino);
 
-set<int> obtenerAdjacentes(int grafo[5][5], int inicio, int profundidad);
+bool existeCamino(int grafo[5][5], int inicio, int destino,int profundidad);
 
 #endif // EVALUADOR_H

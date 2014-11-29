@@ -27,14 +27,30 @@ void evaluar()
     double nota = 0;
 
     cout<<"Ejercicio existeCamino():\t\t";
-    double nota_existe = 0;
-    if(!existeCamino(grafo,4,1) && existeCamino(grafo,1,4) && !existeCamino(grafo,3,1) && existeCamino(grafo,2,4))
+    if(obtenerDistanciaAristaDirecta(grafo,1,1)==0
+        && obtenerDistanciaAristaDirecta(grafo,1,4)==6
+        && obtenerDistanciaAristaDirecta(grafo,4,2)==infinito
+        && obtenerDistanciaAristaDirecta(grafo,3,4)==5
+        && obtenerDistanciaAristaDirecta(grafo,2,1)==infinito
+        )
     {
-        nota_existe+=1;
+        nota+=3;
+        cout<<"Correcto"<<endl;
+    }else
+    {
+        cout<<"Incorrecto"<<endl;
     }
-    if(existeCamino(grafo,0,4) && !existeCamino(grafo,4,1) && existeCamino(grafo,1,4) && !existeCamino(grafo,3,1) && existeCamino(grafo,2,4))
+
+
+    cout<<"Ejercicio existeCamino():\t\t";
+    double nota_existe = 0;
+    if(!existeCamino(grafo,4,1,5) && existeCamino(grafo,1,4,5) && !existeCamino(grafo,3,1,5) && existeCamino(grafo,2,4,5))
     {
-        nota_existe+=2.5;
+        nota_existe+=2;
+    }
+    if(existeCamino(grafo,0,4,5) && !existeCamino(grafo,4,1,5) && existeCamino(grafo,1,4,5) && !existeCamino(grafo,3,1,5) && existeCamino(grafo,2,4,5))
+    {
+        nota_existe+=2;
 
     nota+=nota_existe;
     if(nota==3,5)
@@ -45,71 +61,6 @@ void evaluar()
     {
         cout<<"Casi"<<endl;
     }else
-    {
-        cout<<"Incorrecto"<<endl;
-    }
-
-    set<int> alumno = obtenerAdjacentes(grafo,0, 0);
-    set<int> respuesta;
-    respuesta.insert(0);
-
-
-    set<int> alumno2 = obtenerAdjacentes(grafo,0, 1);
-    set<int> respuesta2;
-    respuesta2.insert(0);
-    respuesta2.insert(1);
-    respuesta2.insert(2);
-    respuesta2.insert(3);
-
-
-    set<int> alumno3 = obtenerAdjacentes(grafo,0, 2);
-    set<int> respuesta3;
-    respuesta3.insert(0);
-    respuesta3.insert(1);
-    respuesta3.insert(2);
-    respuesta3.insert(3);
-    respuesta3.insert(4);
-
-    set<int> alumno4 = obtenerAdjacentes(grafo,1, 0);
-    set<int> respuesta4;
-    respuesta4.insert(1);
-
-    set<int> alumno5 = obtenerAdjacentes(grafo,1, 1);
-    set<int> respuesta5;
-    respuesta5.insert(1);
-    respuesta5.insert(3);
-    respuesta5.insert(4);
-
-    set<int> alumno6 = obtenerAdjacentes(grafo,1, 2);
-    set<int> respuesta6;
-    respuesta6.insert(1);
-    respuesta6.insert(3);
-    respuesta6.insert(4);
-
-    cout<<"Ejercicio obtenerAdjacentes():\t\t";
-    double nota_adj=0;
-    if((alumno==respuesta) && (alumno4==respuesta4))
-    {
-        nota_adj+=1;
-    }
-    if((alumno2==respuesta2) && (alumno5==respuesta5))
-    {
-        nota_adj+=1;
-    }
-    if((alumno3==respuesta3) && (alumno6==respuesta6))
-    {
-        nota_adj+=1.5;
-    }
-
-    nota+=nota_adj;
-    if(nota_adj==3.5)
-    {
-        cout<<"Correcto"<<endl;
-    }else if(nota_adj>0)
-    {
-        cout<<"Casi"<<endl;
-    }
-    else
     {
         cout<<"Incorrecto"<<endl;
     }
