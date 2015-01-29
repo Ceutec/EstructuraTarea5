@@ -94,3 +94,16 @@
 	<iostream>
 	<vector>
 
+1422489620 source:/home/turupawn/Projects/Clases/Estructura/Tarea5/Evaluador.cpp
+	"Evaluador.h"
+
+1422488918 /home/turupawn/Projects/Clases/Estructura/Tarea5/Evaluador.h
+	<iostream>
+	<set>
+	<vector>
+
+1422489506 source:/home/turupawn/Projects/Clases/Estructura/Tarea5/main.cpp
+	"Evaluador.h"
+	<iostream>
+	<vector>
+
