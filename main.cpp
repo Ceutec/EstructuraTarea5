@@ -18,6 +18,11 @@ int obtenerDistanciaAristaDirecta(int grafo[5][5], int inicio, int destino)
     return -1;
 }
 
+//Dado un grafo y un nodo inicial. Devuelve un vector ordenado que contenga todos los nodos adjacentes al nodo inicial.
+//Ejemplo:
+//Dado el siguiente grafo y el nodo inicial 2
+//http://visualgo.net/dfsbfs.html
+//Devuelve el siguiente vector: {0,1,3}
 vector<int> obtenerListaDeAristas(int grafo[5][5], int inicio)
 {
     vector<int> respuesta;
